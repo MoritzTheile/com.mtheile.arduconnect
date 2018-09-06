@@ -13,10 +13,9 @@ public class RedGreenLight {
 
 	public static void main(String[] args) throws Exception {
 		
-		final Link link = LinkManager.getInstance().getConfigurer(URIs.newURI("ardulink://serial/?port=COM3&pingprobe=false")).newLink();
+		final Link link = LinkManager.getInstance().getConfigurer(URIs.newURI("ardulink://serial-jssc/?port=COM3&pingprobe=false")).newLink();
 
-		//System.setProperty("java.library.path", "C:\\Users\\theil\\eclipseWorkspace_Ardulink\\arduconnect\\lib\\rxtxSerial.dll");
-		
+
 		DigitalPin pin3 = Pin.digitalPin(3);
 		DigitalPin pin2 = Pin.digitalPin(2);
 
