@@ -1,8 +1,5 @@
 package com.theile.arduino.ardulink.test;
 
-import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
-
 import org.ardulink.core.Link;
 import org.ardulink.core.Pin;
 import org.ardulink.core.Pin.DigitalPin;
@@ -13,9 +10,10 @@ public class RedGreenLight {
 
 	public static void main(String[] args) throws Exception {
 		
-		final Link link = LinkManager.getInstance().getConfigurer(URIs.newURI("ardulink://serial/?port=COM3&pingprobe=false")).newLink();
-
-		//System.setProperty("java.library.path", "C:\\Users\\theil\\eclipseWorkspace_Ardulink\\arduconnect\\lib\\rxtxSerial.dll");
+		// final Link link = LinkManager.getInstance().getConfigurer(URIs.newURI("ardulink://serial/?port=COM3&pingprobe=false")).newLink();
+		final Link link = LinkManager.getInstance().getConfigurer(URIs.newURI("ardulink://serial-jssc/?port=COM6&pingprobe=false")).newLink();
+		
+		//System.setProperty("java.library.path", ""C:\\dev\\git\\com.mtheile.arduconnect\\lib"");
 		
 		DigitalPin pin3 = Pin.digitalPin(3);
 		DigitalPin pin2 = Pin.digitalPin(2);
